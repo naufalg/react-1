@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import FormInput from "../Components/Web-Elements/FormInput";
 
 export default function ProfileForm() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date(1990, 0, 1));
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [address, setAddress] = useState("");
   // const [birthDate, setBirthDate] = useState("");
-  const [gender, setGender] = useState();
-  const [skill, setSkill] = useState();
+  const [gender, setGender] = useState("");
+  const [skill, setSkill] = useState([
+    { skilltype: "Front-end", isChecked: false },
+    { skilltype: "Back-end", isChecked: false },
+    { skilltype: "Full-stack", isChecked: false },
+  ]);
 
   let nameChange = (e) => {
     setFullName(e.target.value);
@@ -24,17 +29,27 @@ export default function ProfileForm() {
   let addressChange = (e) => {
     setAddress(e.target.value);
   };
+  let skillChange = (param) => {
+    param.isChecked = !param.isChecked;
+    let newSkillData = [...skill];
+    setSkill(newSkillData);
+  };
   // let setStartDateChange = (e) => {
   //   setStartDate(e.target.value);
   // };
 
   const resultForm = (e) => {
     e.preventDefault();
-    if ((fullName.length, email.length, password.length, address.length < 1)) {
+    if ((fullName.length < 1 || email.length< 1 || password.length< 1 || address.length < 1)) {
       alert("invalid input");
     } else {
+      let filteredSkill = skill.filter((item) => item.isChecked == true);
+      let resultSkill = [...filteredSkill];
+      let arrSkill = resultSkill.map((item) => [item.skilltype]);
+      let joinedSkill = arrSkill.join(", ");
+      console.log(arrSkill);
       alert(
-        `Fullname: ${fullName} \n E-mail: ${email} \n Password: ${password} Address: \n ${address} Birthdate: \n ${startDate} \n`
+        `Fullname: ${fullName} \n E-mail: ${email} \n Password: ${password} \n Address: ${address} \n Birthdate: \n ${startDate} \n Gender: ${gender} \n Skill: ${joinedSkill}`
       );
     }
   };
@@ -45,44 +60,40 @@ export default function ProfileForm() {
         <div className="col-lg-3"></div>
         <div className="form-group col-lg-6">
           <form>
-            <label className="h4">Full Name</label>
-            <input
+            <FormInput
+              inputTitle="Full Name"
+              changeHandler={nameChange}
+              state={fullName}
+              placeholder="Example: Dohn Joe"
               type="text"
-              className="w-100 form-control"
-              autoComplete="off"
-              placeholder="Your name"
-              onChange={nameChange}
-              value={fullName}
             />
             <br />
-            <label className="h4">Email</label>
-            <input
+            <FormInput
+              inputTitle="Email"
+              changeHandler={emailChange}
+              state={email}
+              placeholder="Example: openyourdoor@fbi.com"
               type="email"
-              className="w-100 form-control"
-              autoComplete="off"
-              placeholder="Your email"
-              onChange={emailChange}
-              value={email}
             />
             <br />
-            <label className="h4">Password</label>
-            <input
+            <FormInput
+              inputTitle="Password"
+              changeHandler={passwordChange}
+              state={password}
+              placeholder="Example: ••••••• << something like that"
               type="password"
-              className="w-100 form-control"
-              autoComplete="off"
-              placeholder="Your password"
-              onChange={passwordChange}
-              value={password}
             />
             <br />
             <label className="h4">Address</label>
             <textarea
               type="text"
+              rows="4"
               className="w-100 form-control"
               autoComplete="off"
-              placeholder="Your Address"
+              placeholder="Example: Grove St. Ganton, Los Santos, US"
               onChange={addressChange}
               value={address}
+              required
             />
             <br />
             <label className="h4">Birthdate</label>
@@ -99,24 +110,26 @@ export default function ProfileForm() {
               <input
                 class="form-check-input"
                 type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-                checked
+                name="genderRadio"
+                id="maleRadioId"
+                value="male"
+                onChange={() => setGender("Male")}
+                checked={gender == "Male"}
               />
-              <label class="form-check-label" for="exampleRadios1">
+              <label class="form-check-label" for="maleRadioId">
                 Male
               </label>
               <br />
               <input
                 class="form-check-input"
                 type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-                checked
+                name="genderRadio"
+                id="femaleRadioId"
+                value="female"
+                onChange={() => setGender("Female")}
+                checked={gender == "Female"}
               />
-              <label class="form-check-label" for="exampleRadios1">
+              <label class="form-check-label" for="femaleRadioId">
                 Female
               </label>
             </div>
@@ -124,35 +137,24 @@ export default function ProfileForm() {
             <label className="h4">Skill</label>
             <br />
             <div class="form-check form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox1"
-                value="option1"
-              />
-              <label class="form-check-label" for="inlineCheckbox1">
-                Front-end
-              </label>
-              <br />
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox1"
-                value="Front-end"
-              />
-              <label class="form-check-label" for="inlineCheckbox1">
-                Back-end
-              </label>
-              <br />
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="inlineCheckbox1"
-                value="Back-end"
-              />
-              <label class="form-check-label" for="inlineCheckbox1">
-                Full-stack
-              </label>
+              {skill.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id={item.skilltype}
+                      value="option1"
+                      checked={item.isChecked}
+                      onChange={() => skillChange(item)}
+                    />
+                    <label class="form-check-label" for={item.skilltype}>
+                      {item.skilltype}
+                    </label>
+                    <br />
+                  </div>
+                );
+              })}
             </div>
             <br />
             <button className="btn btn-info" type="submit" onClick={resultForm}>

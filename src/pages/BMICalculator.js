@@ -45,9 +45,9 @@ export default function BMICalculator() {
           <h2>BMI Calculator</h2>
         </div>
       </div>
-      <div className="row text-center">
-        <div className="col-md-3"></div>
-        <div className="col-md-6">
+      <div className="row">
+        <div className="col-md-4"></div>
+        <div className="col-md-4">
           <form action="" className="form-group">
             <label htmlFor="">Your weight (kg)</label>
             <input
@@ -66,7 +66,7 @@ export default function BMICalculator() {
             />
           </form>
         </div>
-        <div className="col-md-3"></div>
+        <div className="col-md-4"></div>
       </div>
       <br />
       <div className="row text-center">
