@@ -17,7 +17,68 @@ export default function Home() {
 
   return (
     <div className="container text-center">
-    <br/>
+      {/* <nav className="menu">
+        <input
+          type="checkbox"
+          href="#"
+          className="menu-open"
+          name="menu-open"
+          id="menu-open"
+        />
+        <label className="menu-open-button" for="menu-open">
+          <img
+            className="img-logo"
+            src="./assets/images/javascript-logo.png"
+            alt=""
+          />
+        </label>
+        <a
+          href="https://naufalghifari.netlify.app/pages/portfolio/portfolio.html"
+          className="menu-item top"
+        >
+          <img className="img-logo" src="./assets/images/NG-text.png" alt="" />
+        </a>
+        <a
+          href="./route/pages/js-intro/js-intro.html"
+          className="menu-item top-right"
+        >
+          <img
+            className="img-logo"
+            src="./assets/images/1step-black.png"
+            alt=""
+          />
+        </a>
+        <a
+          href="./route/pages/js-cond/js-conditional.html"
+          className="menu-item bot-right"
+        >
+          <img className="img-logo" src="./assets/images/if-else.png" alt="" />
+        </a>
+        <a href="./route/pages/js-2.html" className="menu-item bottom">
+          <img className="img-logo" src="./assets/images/next.png" alt="" />
+        </a>
+        <a
+          href="./route/pages/js-loop/js-loop.html"
+          className="menu-item bot-left"
+        >
+          <img
+            className="img-logo"
+            src="./assets/images/loop-logo.png"
+            alt=""
+          />
+        </a>
+        <a
+          href="./route/pages/js-func/js-func.html"
+          className="menu-item top-left"
+        >
+          <img
+            className="img-logo"
+            src="./assets/images/arrow-function.png"
+            alt=""
+          />
+        </a>
+      </nav> */}
+      <br />
       <h1>
         {" "}
         {heading} {inputText}{" "}

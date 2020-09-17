@@ -48,7 +48,7 @@ export default function UpCase() {
             type="text"
             onChange={handleChange}
             value={inputText}
-            placeholder="your name"
+            placeholder="type here, DON'T UPPER CASE PLS"
           />
           <h1>{result}</h1>
         </div>
