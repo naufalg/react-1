@@ -1,24 +1,56 @@
 // jshint esversion:10
 import React from "react";
-import logo from "./logo.svg";
+// routerDom
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// css
 import "./App.css";
-import CounterFunct from "./Components/Function/CounterFunct";
-import CounterClass from "./Components/Function/CounterClass";
+// pages
+import Home from "./pages/Home";
 import ProductShow from "./Components/ProductShow";
+import CounterFeature from "./pages/CounterFeature";
+import Users from "./pages/Users";
+import TodoApp from "./pages/TodoApp";
+import BMICalculator from "./pages/BMICalculator";
+import ProfileForm from "./pages/ProfileForm";
+import UpCase from "./pages/UpCase";
+// web elements
+import Navbar from "./Components/Web-Elements/Navbar";
 
 function App() {
   return (
-    <div className="App">
-    <br/>
-    <br/>
-      <div className="container text-center">
-        <CounterFunct />
-        <hr className="featurette-divider"></hr>
-        <CounterClass />
-        <hr className="featurette-divider"></hr>
-        <ProductShow />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <br />
+        <br />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/CounterFeature">
+            <CounterFeature />
+          </Route>
+          <Route path="/ProductShow">
+            <ProductShow />
+          </Route>
+          <Route path="/TodoApp">
+            <TodoApp />
+          </Route>
+          <Route path="/BMICalculator">
+            <BMICalculator />
+          </Route>
+          <Route path="/ProfileForm">
+            <ProfileForm />
+          </Route>
+          <Route path="/UpCase">
+            <UpCase />
+          </Route>
+          <Route path="/Users/:id">
+            <Users />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 

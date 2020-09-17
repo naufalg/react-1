@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import productList from "./Data/productList";
 import Card from "./Web-Elements/Card/Card";
 
