@@ -6,13 +6,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 // pages
 import Home from "./pages/Home";
-import ProductShow from "./Components/ProductShow";
+import Home2 from "./pages/Home2";
+import ProductShow from "./pages/ProductShow";
 import CounterFeature from "./pages/CounterFeature";
 import Users from "./pages/Users";
 import TodoApp from "./pages/TodoApp";
 import BMICalculator from "./pages/BMICalculator";
 import ProfileForm from "./pages/ProfileForm";
 import UpCase from "./pages/UpCase";
+import UseEffectTest from "./pages/UseEffectTest";
 // web elements
 import Navbar from "./Components/Web-Elements/Navbar";
 
@@ -20,12 +22,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <br />
+        {/* <Navbar /> */}
         <br />
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/Home2">
+            <Home2 />
           </Route>
           <Route path="/CounterFeature">
             <CounterFeature />
@@ -44,6 +48,9 @@ function App() {
           </Route>
           <Route path="/UpCase">
             <UpCase />
+          </Route>
+          <Route path="/useEffectTest">
+            <UseEffectTest />
           </Route>
           <Route path="/Users/:id">
             <Users />

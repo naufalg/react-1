@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BackTop from '../Components/Web-Elements/BackTop'
 
 export default function BMICalculator() {
   const [weight, setWeight] = useState();
@@ -40,6 +41,7 @@ export default function BMICalculator() {
   return (
     //   <div>BMI</div>
     <div className="container">
+    <BackTop to="/"></BackTop>
       <div className="row text-center">
         <div className="col-12">
           <h2>BMI Calculator</h2>

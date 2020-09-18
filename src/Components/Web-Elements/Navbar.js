@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">React</Link>
+    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">
+        React
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -56,6 +58,10 @@ export default function Navbar() {
               <div className="dropdown-divider"></div>
               <Link className="dropdown-item" to="/upcase">
                 To Upper Case
+              </Link>
+              <div className="dropdown-divider"></div>
+              <Link className="dropdown-item" to="/useEffectTest">
+                Use Effect
               </Link>
             </div>
           </li>

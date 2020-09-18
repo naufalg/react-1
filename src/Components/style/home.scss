@@ -9,6 +9,12 @@ a {
   }
   
   // class
+  // .react-btn {
+  //   filter:invert(1)
+  // }
+
+
+
   .img-logo {
     max-width: 60%;
   }
@@ -17,12 +23,16 @@ a {
     filter: invert(1);
   }
   
+
+  // color
+  $react: #61dbfb;
+  $redux: #764abc;
   
   // revolver menu
   body {
     padding: 0;
     margin: 0;
-    background: #596778;
+    background: #282c34;
     color: #EEEEEE;
     text-align: center;
     font-family: "Lato", sans-serif;
@@ -41,7 +51,7 @@ a {
   
   .menu-item,
   .menu-open-button {
-    background: #F0DB4F;
+    background: #61dbfb;
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -128,7 +138,7 @@ a {
   } */
   
   .menu-item:hover {
-    background: #E5AC1B;
+    background: $redux;
     color: #3290B1;
   }
   
@@ -190,7 +200,8 @@ a {
     -webkit-transition-duration: 200ms;
     transition-duration: 200ms;
     -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0) rotate(90deg);
+    // transform: ;
   }
   
   .menu-open:checked ~ .menu-item {

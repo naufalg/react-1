@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BackTop from '../Components/Web-Elements/BackTop'
 
 export default function TodoApp() {
   // state
@@ -57,6 +58,7 @@ export default function TodoApp() {
 
   return (
     <div className="container text-center">
+    <BackTop to="/Home2"></BackTop>
       <div className="row">
         <div className="col-12">
           <h1>To do app </h1>

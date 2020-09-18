@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BackTop from '../Components/Web-Elements/BackTop'
 
 export default function UpCase() {
   const [inputText, setInputText] = useState("");
@@ -27,6 +28,7 @@ export default function UpCase() {
 
   return (
     <div className="container text-center">
+    <BackTop to="/"></BackTop>
       <div className="row text-center">
         <div className="col-12">
           <h4 className="dipslay-4">DON'T BE ANGRY, type calmly, ok?</h4>

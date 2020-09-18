@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import FormInput from "../Components/Web-Elements/FormInput";
+import BackTop from '../Components/Web-Elements/BackTop'
+
 
 export default function ProfileForm() {
   const [startDate, setStartDate] = useState(new Date(1990, 0, 1));
@@ -56,6 +58,7 @@ export default function ProfileForm() {
 
   return (
     <div className="container">
+    <BackTop to="/Home2"></BackTop>
       <div className="row">
         <div className="col-lg-3"></div>
         <div className="form-group col-lg-6">
