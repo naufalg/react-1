@@ -24,7 +24,7 @@ export default function BMICalculator() {
     let gexWeightResult = gexObj.test(weight);
     let gexHeightResult = gexObj.test(height);
 
-    if (gexWeightResult == false || gexHeightResult == false) {
+    if (gexWeightResult === false || gexHeightResult === false) {
       alert("invalid input, only use number");
     } else {
       let heightInM = height / 100;
