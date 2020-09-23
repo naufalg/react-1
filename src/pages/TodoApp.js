@@ -53,7 +53,7 @@ export default function TodoApp() {
     let newDelTodo = [...todo];
     let delTodo = newDelTodo.splice(index, 1);
     setTodo(newDelTodo);
-    console.log(newDelTodo);
+    console.log("newDelTodo", newDelTodo);
   };
 
   return (

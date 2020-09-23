@@ -7,14 +7,14 @@ import {addCart, minusCart} from '../redux/action/Cart.action';
 
 console.log("productList", productList);
 
-function ProductShow({product}) {
+function ProductShow() {
   return (
     <div className="container text-center">
     <BackTop to="/"></BackTop>
       <div className="row">
         <div className="card-deck">
           {productList.map((item, idx) => (
-            <Card key={idx} product={item} />
+            <Card key={idx} name={item.name} img={item.img} price={item.price} />
           ))}
         </div>
       </div>
@@ -25,15 +25,15 @@ function ProductShow({product}) {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    count: state.count,
+    cart: state.cart,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   console.log(dispatch)
   return {
-    addCounter : () => dispatch(addCart()),
-    minusCounter : () => dispatch(minusCart())
+    addCart : () => dispatch(addCart()),
+    minusCart : () => dispatch(minusCart())
   }
 }
 

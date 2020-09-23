@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from 'react'
+
 import "../Components/style/home.scss";
 import BtnNav from "../Components/Web-Elements/BtnNav";
 import naufalText from "../Components/Assets/Images/naufalText.png";
-import back from "../Components/Assets/Images/back.png";
+// import back from "../Components/Assets/Images/back.png";
 import next from "../Components/Assets/Images/next.png";
-import lock from "../Components/Assets/Images/lock.png";
+// import lock from "../Components/Assets/Images/lock.png";
 import react from "../Components/Assets/Images/react.png";
 import countLogo from "../Components/Assets/Images/countLogo.png";
 import exportLogo from "../Components/Assets/Images/exportLogo.png";
@@ -15,11 +17,11 @@ import upCaseLogo from "../Components/Assets/Images/upCaseLogo.png";
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 export default function Home() {
-  const [inputText, setInputText] = useState("");
-  const [heading, setHeading] = useState("Hello ");
-  let handleChange = (event) => {
-    setInputText(event.target.value);
-  };
+  // const [inputText, setInputText] = useState("");
+  // const [heading, setHeading] = useState("Hello ");
+  // let handleChange = (event) => {
+  //   setInputText(event.target.value);
+  // };
 
   // console.log(inputText.length);
   // if (inputText !== "") {
@@ -36,28 +38,32 @@ export default function Home() {
           name="menu-open"
           id="menu-open"
         />
-        <label className="menu-open-button" for="menu-open">
+        <label className="menu-open-button" htmlFor="menu-open">
           <img className="img-logo react-btn" src={react} alt="" />
         </label>
         <a
           href="https://naufalghifari.netlify.app/pages/portfolio/portfolio.html"
-          class="menu-item top"
+          className="menu-item top"
         >
-          <img class="img-logo" src={naufalText} alt="" />
+          <img className="img-logo" src={naufalText} alt="" />
         </a>
         <BtnNav
           to="/CounterFeature"
           src={countLogo}
-          class="menu-item top-right"
+          className="menu-item top-right"
         />
         <BtnNav
           to="/ProductShow"
           src={exportLogo}
-          class="menu-item bot-right"
+          className="menu-item bot-right"
         />
-        <BtnNav to="/Home2" src={next} class="menu-item bottom" />
-        <BtnNav to="/BMICalculator" src={bmiLogo} class="menu-item bot-left" />
-        <BtnNav to="/UpCase" src={upCaseLogo} class="menu-item bot-left" />
+        <BtnNav to="/Home2" src={next} className="menu-item bottom" />
+        <BtnNav
+          to="/BMICalculator"
+          src={bmiLogo}
+          className="menu-item bot-left"
+        />
+        <BtnNav to="/UpCase" src={upCaseLogo} className="menu-item bot-left" />
       </nav>
       {/* <br />
       <h1>

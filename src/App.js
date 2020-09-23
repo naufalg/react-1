@@ -16,7 +16,7 @@ import ProfileForm from "./pages/ProfileForm";
 import UpCase from "./pages/UpCase";
 import UseEffectTest from "./pages/UseEffectTest";
 // web elements
-import Navbar from "./Components/Web-Elements/Navbar";
+// import Navbar from "./Components/Web-Elements/Navbar";
 
 function App() {
   return (

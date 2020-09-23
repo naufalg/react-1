@@ -31,7 +31,7 @@ const productList = [
 
 export default function CartFeature() {
     return (
-        <div>
+        <div className="container text-center">
             
         </div>
     )

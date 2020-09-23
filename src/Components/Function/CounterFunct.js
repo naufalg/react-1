@@ -1,5 +1,6 @@
-// jshint esversion:10
-import React, { useState } from "react";
+import React from 'react'
+
+// import React, { useState } from "react";
 import "../../App.css";
 import { connect } from 'react-redux';
 import {addCounter, minusCounter} from '../../redux/action/Counter.action';

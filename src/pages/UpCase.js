@@ -4,16 +4,16 @@ import BackTop from '../Components/Web-Elements/BackTop'
 export default function UpCase() {
   const [inputText, setInputText] = useState("");
   const [result, setResult] = useState("");
-  const [comment, setComment] = useState("");
+  // const [comment, setComment] = useState("");
   // const [result, setResult] = useState("");
   let handleChange = (event) => {
-    if (inputText.length > 0) {
-      setComment("I'm pretty sure the CAPS LOCK is turned off ¯\\_(ツ)_/¯");
-      // } else if (inputText.length <= 0 ) {
-      //   setComment("");
-    } else {
-      setComment("");
-    }
+    // if (inputText.length > 0) {
+    //   setComment("I'm pretty sure the CAPS LOCK is turned off ¯\\_(ツ)_/¯");
+    //   // } else if (inputText.length <= 0 ) {
+    //   //   setComment("");
+    // } else {
+    //   setComment("");
+    // }
     let inputted = event.target.value;
     // console.log(upperInput);
     setInputText(inputted);

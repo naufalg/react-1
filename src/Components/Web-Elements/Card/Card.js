@@ -1,17 +1,17 @@
 import React from "react";
 
-export default function Card({product}) {
+export default function Card(props) {
     // console.log(props);
-    console.log("img", product.img);
+    console.log("name", props.name);
 
   return (
     <div className="card shadow" style={{ width: "18rem" }}>
-      <img className="card-img-top" src={product.img} alt="Card image cap" />
+      <img className="card-img-top" src={props.img} alt="Card image cap" />
       <div className="card-body">
         <p className="card-text text-dark">
-        {product.name}
+        {props.name}
         <br></br>
-        Rp {product.price}.000
+        Rp {props.price}.000
         </p>
       </div>
     </div>

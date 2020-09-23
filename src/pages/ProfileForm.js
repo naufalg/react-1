@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import FormInput from "../Components/Web-Elements/FormInput";
-import BackTop from '../Components/Web-Elements/BackTop'
-
+import BackTop from "../Components/Web-Elements/BackTop";
 
 export default function ProfileForm() {
   const [startDate, setStartDate] = useState(new Date(1990, 0, 1));
@@ -42,10 +41,15 @@ export default function ProfileForm() {
 
   const resultForm = (e) => {
     e.preventDefault();
-    if ((fullName.length < 1 || email.length< 1 || password.length< 1 || address.length < 1)) {
+    if (
+      fullName.length < 1 ||
+      email.length < 1 ||
+      password.length < 1 ||
+      address.length < 1
+    ) {
       alert("invalid input");
     } else {
-      let filteredSkill = skill.filter((item) => item.isChecked == true);
+      let filteredSkill = skill.filter((item) => item.isChecked === true);
       let resultSkill = [...filteredSkill];
       let arrSkill = resultSkill.map((item) => [item.skilltype]);
       let joinedSkill = arrSkill.join(", ");
@@ -57,8 +61,8 @@ export default function ProfileForm() {
   };
 
   return (
-    <div className="container">
-    <BackTop to="/Home2"></BackTop>
+    <div className="container text-left">
+      <BackTop to="/Home2"></BackTop>
       <div className="row">
         <div className="col-lg-3"></div>
         <div className="form-group col-lg-6">
@@ -117,7 +121,7 @@ export default function ProfileForm() {
                 id="maleRadioId"
                 value="male"
                 onChange={() => setGender("Male")}
-                checked={gender == "Male"}
+                checked={gender === "Male"}
               />
               <label class="form-check-label" for="maleRadioId">
                 Male
@@ -130,7 +134,7 @@ export default function ProfileForm() {
                 id="femaleRadioId"
                 value="female"
                 onChange={() => setGender("Female")}
-                checked={gender == "Female"}
+                checked={gender === "Female"}
               />
               <label class="form-check-label" for="femaleRadioId">
                 Female

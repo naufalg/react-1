@@ -9,7 +9,7 @@ export default function BtnNav(props) {
     <a
       href={props.href}
       // className="menu-item"
-      className={props.class}
+      className={props.className}
     >
       <Link to={props.to} onClick={props.onClick}>
         <img className="img-logo" src={props.src} alt="" />
