@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import BackTop from '../Components/Web-Elements/BackTop'
+import BackTop from "../Components/Web-Elements/BackTop";
 
 export default function BMICalculator() {
   const [weight, setWeight] = useState();
   const [height, setHeight] = useState();
-  const [BMIResult, setBMIResult] = useState();
+  const [BMIResult, setBMIResult] = useState(0);
 
   let weightChange = (e) => {
     setWeight(e.target.value);
@@ -12,9 +12,9 @@ export default function BMICalculator() {
   let heightChange = (e) => {
     setHeight(e.target.value);
   };
-  let resultChange = (e) => {
-    setBMIResult(e.target.value);
-  };
+  // let resultChange = (e) => {
+  //   setBMIResult(e.target.value);
+  // };
 
   const calculate = (event) => {
     event.preventDefault();
@@ -31,9 +31,9 @@ export default function BMICalculator() {
       // console.log(heightInM);
       let BMINumberDecimal = weight / Math.pow(heightInM, 2);
       let BMINumber = BMINumberDecimal.toFixed(2);
-      setBMIResult(`Your BMI is: ${BMINumber}`);
-      setHeight("");
-      setWeight("");
+      setBMIResult(BMINumber);
+      setHeight(0);
+      setWeight(0);
     }
   };
   console.log(BMIResult);
@@ -41,7 +41,7 @@ export default function BMICalculator() {
   return (
     //   <div>BMI</div>
     <div className="container">
-    <BackTop to="/"></BackTop>
+      <BackTop to="/"></BackTop>
       <div className="row text-center">
         <div className="col-12">
           <h2>BMI Calculator</h2>
@@ -77,7 +77,8 @@ export default function BMICalculator() {
             Calculate
           </button>
           <br />
-          <h3 onChange={resultChange}>{BMIResult}</h3>
+          {/* <h3 onChange={resultChange}>{BMIResult}</h3> */}
+          {BMIResult !== 0 ? <h3>Your BMI number is: {BMIResult}</h3> : null}
         </div>
       </div>
     </div>

@@ -1,42 +1,57 @@
 import React, { useEffect } from "react";
-import { getUsers } from "../redux/action/getUser.action";
+import BackTop from "../Components/Web-Elements/BackTop";
+import { getUsersActions } from "../redux/action/getUser.action";
 import { connect } from "react-redux";
+import { Spinner } from "react-bootstrap";
 
 function UserData(props) {
-    console.log("props", props);
-    console.log("props.getUsers", props.getUsers);
+  // console.log("props atas", props);
+  // console.log("props.getUsersData", props.getUsersData);
   useEffect(() => {
     // console.log(getUsers);
-    props.getUsers();
-  }, [props.getUsers]);
-
+    props.getUsersActions();
+  }, [props.getUsersActions]);
 
   return (
-    <div>
+    <div className="container">
+      <BackTop to="/Home2"></BackTop>
       <h3>User Data</h3>
-      <h4>the data</h4>
-      {props.getUsers.map((item, index) => (
-        <div key={index}>
-          <img src={item.getUsers.data.avatar} alt="" />
-          <p>name: {item.getUsers.data.name}</p>
-        </div>
-      ))}
+      <br />
+      <h5>
+        <a href="https://5f51a6865e98480016123bdd.mockapi.io/products">
+          https://5f51a6865e98480016123bdd.mockapi.io/products
+        </a>
+      </h5>
+      <div className="row">
+        {props.getUsersData.isLoading === true ? (
+          <div className=" align-item-center col-12 justify-content-center">
+            <Spinner animation="border" variant="info" />
+          </div>
+        ) : (
+          props.getUsersData.data.map((item, index) => (
+            <div className="col-sm-3" key={index}>
+              <img src={item.avatar} alt="" />
+              <p>name: {item.name}</p>
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
 }
 
 const mapStateToProps = (props) => {
+  // console.log("props map state", props);
   return {
-    getUsers: props.data,
+    getUsersData: props.getUsersReducer,
   };
 };
 
-
 const mapDispatchToProps = (dispatch) => {
-    return {
-      getUsers: () => dispatch(getUsers()),
-    };
+  // console.log("dispatch");
+  return {
+    getUsersActions: () => dispatch(getUsersActions()),
   };
-  
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserData);

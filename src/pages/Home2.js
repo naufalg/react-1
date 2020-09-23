@@ -10,7 +10,7 @@ import react from "../Components/Assets/Images/react.png";
 import formLogo from "../Components/Assets/Images/formLogo.png";
 import todoIcon from "../Components/Assets/Images/todoIcon.png";
 import useEffectLogo from "../Components/Assets/Images/useEffectLogo.png";
-// import upCaseLogo from "../Components/Assets/Images/upCaseLogo.png";
+import reduxLogo from "../Components/Assets/Images/redux-logo.png";
 
 
 // react router
@@ -59,7 +59,7 @@ export default function Home() {
         />
         <BtnNav src={lock} className="menu-item bottom" />
         <BtnNav to="/UseEffectTest" src={useEffectLogo} className="menu-item bot-left" />
-        <BtnNav to="/UserData" src={react} className="menu-item top-left" />
+        <BtnNav to="/UserData" src={reduxLogo} className="menu-item top-left" />
         
       </nav>
       {/* <br />

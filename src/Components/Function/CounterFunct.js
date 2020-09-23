@@ -20,7 +20,8 @@ function CounterFunct(props) {
   //   setCount(count + 1);
   // };
 
-  console.log(props)
+  // console.log("props", props)
+  // console.log("props.count", props.count)
 
 
   return (
@@ -31,7 +32,7 @@ function CounterFunct(props) {
           <button className="btn btn-danger rounded-circle" onClick={props.minusCounter}>
             -
           </button>
-          &nbsp; {props.count} &nbsp;
+          &nbsp; {props.counter.count < 0 ? (alert("number must be > 0")) : (props.counter.count)} &nbsp;
           <button className="btn btn-info rounded-circle" onClick={props.addCounter}>
             +
           </button>
@@ -42,14 +43,14 @@ function CounterFunct(props) {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
+  // console.log("state", state)
   return {
-    count: state.count,
+    counter: state.countReducer,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  console.log(dispatch)
+  // console.log("dispatch", dispatch)
   return {
     addCounter : () => dispatch(addCounter()),
     minusCounter : () => dispatch(minusCounter())

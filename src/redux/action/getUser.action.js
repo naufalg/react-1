@@ -23,7 +23,7 @@ export const getUserFailed = (error) => {
   };
 };
 
-export function getUsers() {
+export function getUsersActions() {
   return function (dispatch) {
     dispatch(getUserRequest());
     const url1 = "https://5f51a6865e98480016123bdd.mockapi.io/products";
