@@ -15,6 +15,7 @@ import BMICalculator from "./pages/BMICalculator";
 import ProfileForm from "./pages/ProfileForm";
 import UpCase from "./pages/UpCase";
 import UseEffectTest from "./pages/UseEffectTest";
+import UserData from './pages/UserData';
 // web elements
 // import Navbar from "./Components/Web-Elements/Navbar";
 
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route path="/useEffectTest">
             <UseEffectTest />
+          </Route>
+          <Route path="/UserData">
+            <UserData />
           </Route>
           <Route path="/Users/:id">
             <Users />

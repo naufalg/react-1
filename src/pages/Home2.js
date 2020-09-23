@@ -59,7 +59,7 @@ export default function Home() {
         />
         <BtnNav src={lock} className="menu-item bottom" />
         <BtnNav to="/UseEffectTest" src={useEffectLogo} className="menu-item bot-left" />
-        <BtnNav src={lock} className="menu-item bot-left" />
+        <BtnNav to="/UserData" src={react} className="menu-item top-left" />
         
       </nav>
       {/* <br />
