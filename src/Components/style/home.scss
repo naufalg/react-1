@@ -25,7 +25,7 @@ font-family: 'Montserrat', sans-serif;
   position: absolute;
   opacity: 0;
   font-size: 0.8em;
-  transition: 0.3s;
+  transition: 0.1s;
   z-index: 0;
   -webkit-user-select:none;
   -moz-user-select:none;
@@ -35,38 +35,32 @@ font-family: 'Montserrat', sans-serif;
 
 .top:hover ~ .top-caption {
   opacity: 1;
-  font-size: 0.8em;
   -webkit-transform: translate3d(0, 22vh, 0);
   transform: translate3d(0, 22vh, 0);
 }
 .top-right:hover ~ .top-right-caption {
   opacity: 1;
-  font-size: 0.8em;
   -webkit-transform: translate3d(0, 22vh, 0);
   transform: translate3d(0, 22vh, 0);
 }
 .bot-right:hover ~ .bot-right-caption {
   opacity: 1;
-  font-size: 0.8em;
   -webkit-transform: translate3d(0, 22vh, 0);
   transform: translate3d(0, 22vh, 0);
 }
 
 .bottom:hover ~ .bottom-caption {
   opacity: 1;
-  font-size: 0.8em;
   -webkit-transform: translate3d(0, 22vh, 0);
   transform: translate3d(0, 22vh, 0);
 }
 .bot-left:hover ~ .bot-left-caption {
   opacity: 1;
-  font-size: 0.8em;
   -webkit-transform: translate3d(0, 22vh, 0);
   transform: translate3d(0, 22vh, 0);
 }
 .top-left:hover ~ .top-left-caption {
   opacity: 1;
-  font-size: 0.8em;
   -webkit-transform: translate3d(0, 22vh, 0);
   transform: translate3d(0, 22vh, 0);
 }
@@ -75,7 +69,7 @@ font-family: 'Montserrat', sans-serif;
 // words
 
 .img-logo {
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .menu-item:hover .img-logo {

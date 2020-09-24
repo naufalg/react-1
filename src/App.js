@@ -7,6 +7,7 @@ import "./App.css";
 // pages
 import Home from "./pages/Home";
 import Home2 from "./pages/Home2";
+import Home3 from "./pages/Home3";
 import ProductShow from "./pages/ProductShow";
 import CounterFeature from "./pages/CounterFeature";
 import Users from "./pages/Users";
@@ -16,6 +17,7 @@ import ProfileForm from "./pages/ProfileForm";
 import UpCase from "./pages/UpCase";
 import UseEffectTest from "./pages/UseEffectTest";
 import UserData from './pages/UserData';
+import ReduxCrud from './pages/ReduxCrud';
 // web elements
 // import Navbar from "./Components/Web-Elements/Navbar";
 
@@ -31,6 +33,9 @@ function App() {
           </Route>
           <Route path="/Home2">
             <Home2 />
+          </Route>
+          <Route path="/Home3">
+            <Home3 />
           </Route>
           <Route path="/CounterFeature">
             <CounterFeature />
@@ -55,6 +60,9 @@ function App() {
           </Route>
           <Route path="/UserData">
             <UserData />
+          </Route>
+          <Route path="/ReduxCrud">
+            <ReduxCrud />
           </Route>
           <Route path="/Users/:id">
             <Users />
