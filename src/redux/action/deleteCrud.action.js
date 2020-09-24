@@ -1,5 +1,5 @@
 import axios from "axios";
-import {getCrudActions} from './getCrud.action'
+// import {getCrudActions} from './getCrud.action'
 
 export const DELETE_DATA = "DELETE_DATA";
 // export const DELETE_DATA_SUCCESS = "DELETE_DATA_SUCCESS";

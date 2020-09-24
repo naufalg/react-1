@@ -10,13 +10,14 @@ export function setPostAction() {
 }
 
 export const postCrudActions = (values, e) => {
-//   e.preventDefault();
+  e.preventDefault();
   console.log("tes", values, e);
 
   return axios
     .post("https://5f6c576f8d5ef70016ca0b19.mockapi.io/Product", values)
     .then((response) => {
       console.log(response);
+      window.location.reload(true)
     })
     .catch((error) => {
       console.log(error);
