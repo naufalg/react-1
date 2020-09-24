@@ -109,11 +109,11 @@ function ReduxCrud(props) {
             <div className="col-lg-3" key={index}>
               <div
                 className="card shadow text-dark mx-lg-auto my-2"
-                style={{ maxWidth: "18rem" }}
+                style={{ maxWidth: "18rem", maxheight: "350px" }}
               >
                 <img
                   className="card-img-top"
-                  style={{ borderRadius: "0" }}
+                  style={{ borderRadius: "0", maxHeight:"150px" }}
                   src={item.img}
                   alt=""
                 />
