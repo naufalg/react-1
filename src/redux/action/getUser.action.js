@@ -26,7 +26,7 @@ export const getUserFailed = (error) => {
 export function getUsersActions() {
   return function (dispatch) {
     dispatch(getUserRequest());
-    const url1 = "https://5f51a6865e98480016123bdd.mockapi.io/products";
+    const url1 = "https://5f6c576f8d5ef70016ca0b19.mockapi.io/users";
     axios
       .get(url1)
       .then((result) => dispatch(getUserSuccess(result.data)))

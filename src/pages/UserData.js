@@ -18,8 +18,8 @@ function UserData(props) {
       <h3>User Data</h3>
       <br />
       <h5>
-        <a href="https://5f51a6865e98480016123bdd.mockapi.io/products">
-          https://5f51a6865e98480016123bdd.mockapi.io/products
+        <a href="https://5f6c576f8d5ef70016ca0b19.mockapi.io/users">
+        https://5f6c576f8d5ef70016ca0b19.mockapi.io/users
         </a>
       </h5>
       <div className="row">

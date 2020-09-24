@@ -45,7 +45,7 @@ function ReduxCrud(props) {
       <br />
       <h5 className="heading-4">
         <a href="https://5f6c576f8d5ef70016ca0b19.mockapi.io/Product">
-          https://5f6c576f8d5ef70016ca0b19.mockapi.io/Product
+        https://5f6c576f8d5ef70016ca0b19.mockapi.io/Product
         </a>
       </h5>
       <br />
