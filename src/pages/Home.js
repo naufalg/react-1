@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import React from 'react'
+import React from "react";
 
 import "../Components/style/home.scss";
 import BtnNav from "../Components/Web-Elements/BtnNav";
@@ -63,7 +63,13 @@ export default function Home() {
           src={bmiLogo}
           className="menu-item bot-left"
         />
-        <BtnNav to="/UpCase" src={upCaseLogo} className="menu-item bot-left" />
+        <BtnNav to="/UpCase" src={upCaseLogo} className="menu-item top-left" />
+        <p className="top-caption cptn">Naufal Ghifari</p>
+        <p className="top-right-caption cptn">Counter</p>
+        <p className="bot-right-caption cptn">Props</p>
+        <p className="bottom-caption cptn">Next</p>
+        <p className="bot-left-caption cptn">BMI Calculator</p>
+        <p className="top-left-caption cptn">UpperCase</p>
       </nav>
       {/* <br />
       <h1>

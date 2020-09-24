@@ -61,6 +61,12 @@ export default function Home() {
         <BtnNav to="/UseEffectTest" src={useEffectLogo} className="menu-item bot-left" />
         <BtnNav to="/UserData" src={reduxLogo} className="menu-item top-left" />
         
+        <p className="top-caption cptn">Back</p>
+        <p className="top-right-caption cptn">Form</p>
+        <p className="bot-right-caption cptn">Todo App</p>
+        <p className="bottom-caption cptn">Locked</p>
+        <p className="bot-left-caption cptn">UseEffect</p>
+        <p className="top-left-caption cptn">Redux State</p>
       </nav>
       {/* <br />
       <h1>
