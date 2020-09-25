@@ -16,8 +16,11 @@ import BMICalculator from "./pages/BMICalculator";
 import ProfileForm from "./pages/ProfileForm";
 import UpCase from "./pages/UpCase";
 import UseEffectTest from "./pages/UseEffectTest";
-import UserData from './pages/UserData';
-import ReduxCrud from './pages/ReduxCrud';
+import UserData from "./pages/UserData";
+import ReduxCrud from "./pages/ReduxCrud";
+import GoogleLoginPage from "./pages/GoogleLoginPage";
+import LoggedInGooglePage from "./pages/LoggedInGooglePage";
+
 // web elements
 // import Navbar from "./Components/Web-Elements/Navbar";
 
@@ -63,6 +66,12 @@ function App() {
           </Route>
           <Route path="/ReduxCrud">
             <ReduxCrud />
+          </Route>
+          <Route path="/GoogleLoginPage">
+            <GoogleLoginPage />
+          </Route>
+          <Route path="/LoggedInGooglePage">
+            <LoggedInGooglePage />
           </Route>
           <Route path="/Users/:id">
             <Users />

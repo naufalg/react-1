@@ -8,7 +8,7 @@ import next from "../Components/Assets/Images/next.png";
 import lock from "../Components/Assets/Images/lock.png";
 import react from "../Components/Assets/Images/react.png";
 import reduxCrud from "../Components/Assets/Images/redux-crud.png";
-import todoIcon from "../Components/Assets/Images/todoIcon.png";
+import googleLogo from "../Components/Assets/Images/google-logo.png";
 import useEffectLogo from "../Components/Assets/Images/useEffectLogo.png";
 import reduxLogo from "../Components/Assets/Images/redux-logo.png";
 
@@ -46,14 +46,14 @@ export default function Home() {
           src={reduxCrud}
           className="menu-item top-right"
         />
-        <BtnNav src={lock} className="menu-item bot-right" />
+        <BtnNav to="/GoogleLoginPage" src={googleLogo} className="menu-item bot-right" />
         <BtnNav src={lock} className="menu-item bottom" />
         <BtnNav src={lock} className="menu-item bot-left" />
         <BtnNav src={lock} className="menu-item top-left" />
 
         <p className="top-caption cptn">Back</p>
         <p className="top-right-caption cptn">Redux CRUD</p>
-        <p className="bot-right-caption cptn">Locked</p>
+        <p className="bot-right-caption cptn">Google OAuth</p>
         <p className="bottom-caption cptn">Locked</p>
         <p className="bot-left-caption cptn">Locked</p>
         <p className="top-left-caption cptn">Locked</p>
